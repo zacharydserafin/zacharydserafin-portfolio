@@ -1,0 +1,138 @@
+:root {
+    --soft-black:#2b2d2e;
+    --strong-violet: #703ea8;
+    --soft-violet: #914edfd2;
+}
+
+*,
+* header,
+* footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    color: var(--soft-violet);
+    background-color: var(--soft-black);
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.first-image {
+    max-width: 400px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 3px solid var(--strong-violet);
+}
+    .header h1 {
+        font-size: 45px;
+        margin-right: auto;
+    }
+
+    .nav {
+        float: right;
+        font-size: 20px;
+        margin: 20px;
+        margin-right: 40px;
+    }
+    
+    .header nav ul li {
+        display: inline-block;
+        margin-left: 25px;
+    }
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+.section-heading {
+    width: 200px;
+    margin-right: 15px;
+    text-align: center;
+    border-right: 3px solid var(--strong-violet);
+}
+
+.section-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin-right: 15px;
+    border-right: 3px solid var(--strong-violet);
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 45px;
+}
+
+.figbox {
+    position: relative;
+    padding: 0px;
+    border: 3px solid var(--strong-violet);
+}
+    .figbox figcaption {
+        position: absolute;
+        padding: 5px;
+        bottom: 0px;
+        background-color: var(--soft-black);
+        border-top: 3px solid var(--strong-violet);
+        border-right: 3px solid var(--strong-violet);
+    }
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    padding: 10px;
+    border-top: 3px solid var(--strong-violet);
+    margin-top: 10px;
+}
+    .footer h2 {
+        font-size: 25px;
+        margin-left: 45px;
+        margin-right: auto;
+        width: 200px;
+        text-align: center;
+    }
+
+    .footer .nav {
+        float: right;
+        font-size: 20px;
+        margin: 20px;
+        margin-right: 200px;
+    }
+    
+    .footer nav ul li {
+        display: inline-block;
+        margin-right: 25px;
+        padding: 0px 50px;
+    }
+
+#aboutMe-heading {
+    border-right: 3px transparent;
+    padding-left: 10px;
+}
+
+#profile-image {
+    max-width: 150px;
+    margin-bottom: 8px;
+}
