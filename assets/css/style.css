@@ -2,6 +2,7 @@
     --soft-black:#2b2d2e;
     --strong-violet: #703ea8;
     --soft-violet: #914edfd2;
+    --left-space: 30px;
 }
 
 *,
@@ -20,8 +21,19 @@ h2 {
     font-weight: 400;
 }
 
-.first-image {
-    max-width: 400px;
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 10px;
+    font-weight: 200;
 }
 
 .header {
@@ -55,7 +67,7 @@ h2 {
     align-items: center;
     width: 100%;
     margin-top: 45px;
-    margin-left: 45px;
+    margin-left: var(--left-space);
 }
 
 .section-heading {
@@ -63,11 +75,13 @@ h2 {
     margin-right: 15px;
     text-align: center;
     border-right: 3px solid var(--strong-violet);
+    flex-shrink: 0;
 }
 
 .section-wrap {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     width: 200px;
     margin-right: 15px;
@@ -78,13 +92,23 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 45px;
+    margin: var(--left-space);
 }
 
+    .work h2 {
+        padding-top: 150px;
+    }
+
 .figbox {
+    display: flex;
+    align-items: flex-end;
+    width: min-content;
+    height: min-content;
     position: relative;
     padding: 0px;
+    margin: 10px;
     border: 3px solid var(--strong-violet);
+    overflow: hidden;
 }
     .figbox figcaption {
         position: absolute;
@@ -94,6 +118,31 @@ h2 {
         border-top: 3px solid var(--strong-violet);
         border-right: 3px solid var(--strong-violet);
     }
+
+.first-image {
+    width: 400px;
+    height: 325px;
+    flex-basis: 600px;
+}
+
+.other-images-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 600px;
+}
+
+.other-images {
+    width: 250px;
+    height: 150px;
+}
+
+.all-images-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .footer {
     display: flex;
