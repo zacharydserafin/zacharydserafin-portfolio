@@ -80,6 +80,10 @@ h6 {
     margin-top: 45px;
     margin-left: var(--left-space);
 }
+    .aboutMe p {
+        width: 75%;
+        margin-right: 20px;
+    }
 
 .section-heading {
     width: 200px;
@@ -136,7 +140,7 @@ h6 {
     }
 
 .first-image {
-    width: 400px;
+    width: 375px;
     height: 325px;
     object-fit: cover;
     flex-basis: 600px;
@@ -166,7 +170,7 @@ h6 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 20px;
+    height: 40px;
     width: 100%;
     padding: 10px;
     border-top: 3px solid var(--strong-violet);
@@ -184,7 +188,7 @@ h6 {
         float: right;
         font-size: 20px;
         margin: 20px;
-        margin-right: 200px;
+        margin-right: 50px;
     }
     
     .footer nav ul li {
@@ -201,4 +205,145 @@ h6 {
 #profile-image {
     max-width: 150px;
     margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1261px) {
+    .first-image {
+        width: 525px;
+    }
+    .footer nav ul li {
+        padding: 10px;
+    }
+    .aboutMe p {
+        font-size: 88%;
+        width: 60%
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header h1 {
+        font-size: 40px;
+    }
+    .first-image {
+        width: 450px;
+        height: 275px;
+        object-fit: cover;
+    }
+    .other-images {
+        width: 212px;
+        height: 120px;
+        object-fit: cover;
+    }
+    .footer .nav {
+        margin-right: 20px;
+    }
+    .aboutMe p {
+        font-size: 78%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+        border-bottom: 3px dashed var(--strong-violet);
+    }
+    .header h1 {
+        text-align: center;
+        margin: 0;
+    }
+    .header .nav ul li {
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+        border-bottom: 3px solid var(--strong-violet);
+        text-align: center;
+        font-size: 100%;
+    }
+    .aboutMe {
+        margin: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutMe p {
+        text-align: center;
+        width: 70%
+    }
+    .section-heading {
+        border: none;
+        border-bottom: 3px solid var(--strong-violet);
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .section-wrap {
+        border: none;
+    }
+    .work {
+        margin: 0;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+    .work h2 {
+        padding: 0;
+    }
+   .all-images-container, .other-images-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+   }
+   .first-image {
+    width: 400px;
+    height: 325px;
+   }
+   .other-images {
+    width: 350px;
+    height: 175px;
+   }
+   .footer {
+    height: 200px;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+   }
+   .footer h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 200%;
+   }
+   .footer .nav ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    border-bottom: 3px solid var(--strong-violet);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+   }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        height: 185px;
+    }
+    .header h1 {
+        font-size: 30px;
+    }
+    .header .nav ul li {
+        font-size: 100%;
+    }
+    .aboutMe p {
+        width: 85%
+    }
+    .first-image {
+        width: 280px;
+        height: 200px;
+    }
+    .other-images {
+        width: 250px;
+        height: 175px;
+    }
 }
