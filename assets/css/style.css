@@ -1,14 +1,20 @@
 :root {
     --soft-black:#2b2d2e;
     --strong-violet: #703ea8;
-    --soft-violet: #914edfd2;
+    --soft-violet: #aa60ff;
     --left-space: 30px;
 }
+
+/* Sitewide Styles */
 
 *,
 * header,
 * footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -47,7 +53,9 @@ h6 {
     font-weight: 200;
 }
 
-.header {
+/* Header and Navbar */
+
+header {
     display: flex;
     align-items: flex-start;
     height: 60px;
@@ -55,24 +63,26 @@ h6 {
     padding: 10px;
     border-bottom: 3px solid var(--strong-violet);
 }
-    .header h1 {
+    header h1 {
         font-size: 45px;
         margin-right: auto;
     }
 
-    .nav {
+    nav {
         float: right;
         font-size: 20px;
         margin: 20px;
         margin-right: 40px;
     }
     
-    .header nav ul li {
+    header nav ul li {
         display: inline-block;
         margin-left: 25px;
     }
 
-.aboutMe {
+/* "About Me" Section */
+
+#about {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,10 +90,12 @@ h6 {
     margin-top: 45px;
     margin-left: var(--left-space);
 }
-    .aboutMe p {
+    #about p {
         width: 75%;
         margin-right: 20px;
     }
+
+/* section-heading applies to both headings in <main>: "About Me" and "Previous Work". By default, the border for those elements comes from this class. */
 
 .section-heading {
     width: 200px;
@@ -92,6 +104,8 @@ h6 {
     border-right: 3px solid var(--strong-violet);
     flex-shrink: 0;
 }
+
+/* section-wrap's purpose is to align the profile image and "About Me" heading. It is also responsible for the border for this section, along with the vertical alignment of the borders of the two sections in <main>. */
 
 .section-wrap {
     display: flex;
@@ -103,27 +117,40 @@ h6 {
     border-right: 3px solid var(--strong-violet);
 }
 
-.work {
+#profile-image {
+    max-width: 150px;
+    margin-bottom: 8px;
+}
+
+/* #aboutMe-heading removes the unaligned border inherited from class section-heading and centers the profile image with the heading. */
+
+#aboutMe-heading {
+    border-right: 3px transparent;
+    padding-left: 10px;
+}
+
+/* "Previous Work" Section */
+
+#work {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: var(--left-space);
 }
 
-    .work h2 {
+    #work h2 {
         padding-top: 130px;
     }
 
+/* figbox applies to all images (but is not limited to images) on the page, providing their borders and figcaption positioning basis. */
+
 .figbox {
-    display: flex;
-    align-items: flex-end;
     width: min-content;
     height: min-content;
     position: relative;
     padding: 0px;
     margin: 10px;
     border: 3px solid var(--strong-violet);
-    overflow: hidden;
 }
     .figbox figcaption {
         position: absolute;
@@ -139,7 +166,7 @@ h6 {
         cursor: pointer;
     }
 
-.first-image {
+#first-image {
     width: 375px;
     height: 325px;
     object-fit: cover;
@@ -165,7 +192,9 @@ h6 {
     flex-wrap: wrap;
 }
 
-.footer {
+/* Footer and Navbar */
+
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -176,7 +205,7 @@ h6 {
     border-top: 3px solid var(--strong-violet);
     margin-top: 10px;
 }
-    .footer h2 {
+    footer h2 {
         font-size: 25px;
         margin-left: 45px;
         margin-right: auto;
@@ -184,47 +213,44 @@ h6 {
         text-align: center;
     }
 
-    .footer .nav {
+    footer nav {
         float: right;
         font-size: 20px;
         margin: 20px;
         margin-right: 50px;
     }
     
-    .footer nav ul li {
+    footer nav ul li {
         display: inline-block;
         margin-right: 25px;
         padding: 0px 50px;
     }
 
-#aboutMe-heading {
-    border-right: 3px transparent;
-    padding-left: 10px;
-}
-
-#profile-image {
-    max-width: 150px;
-    margin-bottom: 8px;
-}
+/* Switching from Row to Two Columns for Images */
 
 @media screen and (max-width: 1261px) {
-    .first-image {
-        width: 525px;
-    }
-    .footer nav ul li {
-        padding: 10px;
-    }
-    .aboutMe p {
+    #about p {
         font-size: 88%;
         width: 60%
     }
+    #first-image {
+        width: 525px;
+    }
+    footer nav ul li {
+        padding: 10px;
+    }
 }
 
+/* Tablet View */
+
 @media screen and (max-width: 992px) {
-    .header h1 {
+    header h1 {
         font-size: 40px;
     }
-    .first-image {
+    #about p {
+        font-size: 78%;
+    }
+    #first-image {
         width: 450px;
         height: 275px;
         object-fit: cover;
@@ -234,42 +260,43 @@ h6 {
         height: 120px;
         object-fit: cover;
     }
-    .footer .nav {
+    footer nav {
         margin-right: 20px;
-    }
-    .aboutMe p {
-        font-size: 78%;
     }
 }
 
+/* Mobile Friendly Layout, Transforms All Elements into Centered Columns */
+
 @media screen and (max-width: 768px) {
-    .header {
+    header {
         flex-direction: column;
         align-items: center;
-        height: 200px;
+        height: 220px;
         border-bottom: 3px dashed var(--strong-violet);
     }
-    .header h1 {
-        text-align: center;
-        margin: 0;
-    }
-    .header .nav ul li {
-        display: flex;
-        flex-direction: column;
-        padding: 3px;
-        border-bottom: 3px solid var(--strong-violet);
-        text-align: center;
-        font-size: 100%;
-    }
-    .aboutMe {
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        header nav ul li {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+            margin-bottom: 10px;
+            border: 3px solid var(--strong-violet);
+            text-align: center;
+            font-size: 100%;
+        }
+    #about {
         margin: 10px;
         flex-direction: column;
         align-items: center;
     }
-    .aboutMe p {
-        text-align: center;
-        width: 70%
-    }
+        #about p {
+            text-align: center;
+            width: 70%;
+            font-size: 100%;
+        }
     .section-heading {
         border: none;
         border-bottom: 3px solid var(--strong-violet);
@@ -279,21 +306,28 @@ h6 {
     .section-wrap {
         border: none;
     }
-    .work {
+    #work {
         margin: 0;
         justify-content: flex-start;
         flex-direction: column;
         align-items: center;
     }
-    .work h2 {
-        padding: 0;
+        #work h2 {
+            padding: 0;
+        }
+    h5 {
+        font-size: 20px;
+    } 
+    
+    h6 {
+        font-size: 15px;
     }
    .all-images-container, .other-images-container {
     flex-direction: column;
     align-items: center;
     margin: 0;
    }
-   .first-image {
+   #first-image {
     width: 400px;
     height: 325px;
    }
@@ -301,44 +335,45 @@ h6 {
     width: 350px;
     height: 175px;
    }
-   .footer {
-    height: 200px;
+   footer {
+    height: 220px;
     margin: 0;
     flex-direction: column;
     align-items: center;
    }
-   .footer h2 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 200%;
-   }
-   .footer .nav ul li {
-    display: flex;
-    flex-direction: column;
-    padding: 3px;
-    border-bottom: 3px solid var(--strong-violet);
-    text-align: center;
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 0;
-   }
+        footer h2 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 200%;
+        }
+        footer nav ul li {
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+            border: 3px solid var(--strong-violet);
+            text-align: center;
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
 }
 
+/* Layout for Small Mobile Screens, Minimum 320px */
+
 @media screen and (max-width: 450px) {
-    .header {
-        height: 185px;
+    header {
+        height: 200px;
     }
-    .header h1 {
-        font-size: 30px;
-    }
-    .header .nav ul li {
-        font-size: 100%;
-    }
-    .aboutMe p {
+        header h1 {
+            font-size: 30px;
+        }
+        header .nav ul li {
+            font-size: 100%;
+        }
+    #about p {
         width: 85%
     }
-    .first-image {
+    #first-image {
         width: 280px;
         height: 200px;
     }
