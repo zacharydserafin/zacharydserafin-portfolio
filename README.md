@@ -10,7 +10,7 @@ The goal of Project (or Challenge) Two was to create our own portfolio webpage f
 
 ## Screenshot
 
-<img src="./assets/screenshots/Challenge-02-Screenshot1.png" width="100%" height="100%" alt="Screenshot of deployed webpage"/>
+<img src="./assets/images/Challenge-02-Screenshot1.png" width="100%" height="100%" alt="Screenshot of deployed webpage"/>
 
 ## Links
 
