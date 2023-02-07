@@ -173,6 +173,8 @@ header {
     flex-basis: 600px;
 }
 
+/* other-images-container puts all of the smaller images in a flexbox so that they form their own grid and can wrap within themselves. */
+
 .other-images-container {
     display: flex;
     flex-direction: row;
@@ -184,6 +186,8 @@ header {
     width: 250px;
     height: 150px;
 }
+
+/* all-images-container combines first-image and other-images-container into one flexbox that wraps as needed. */
 
 .all-images-container {
     display: flex;
